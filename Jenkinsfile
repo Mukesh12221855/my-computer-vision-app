@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    tools {
+        nodejs "Node 16"  // Must match the name you configured
+    }
+    // rest of your pipeline...
+}
+pipeline {
+    agent any
     
     environment {
         DOCKER_IMAGE = 'computer-vision-app'
